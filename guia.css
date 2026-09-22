@@ -1,0 +1,1041 @@
+/* ==================================================
+   CONFIGURACIÓN GENERAL
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f5ed;
+    color: #172b45;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ==================================================
+   COLORES
+================================================== */
+
+:root {
+    --azul: #123b68;
+    --azul-claro: #1e5b96;
+    --crema: #f8f5ed;
+    --crema-oscuro: #eee8da;
+    --blanco: #ffffff;
+    --texto: #172b45;
+    --gris: #697788;
+    --borde: #ddd7ca;
+
+    /* COLOR PRINCIPAL DE LA GUÍA */
+    --verde: #168b82;
+    --verde-claro: #35aaa0;
+    --verde-suave: #e2f2ef;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.guia-header {
+    background: var(--azul);
+    color: white;
+    padding: 25px 6%;
+}
+
+.header-contenido {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 220px 180px 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.volver {
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 11px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.volver:hover {
+    background: var(--verde);
+    border-color: var(--verde);
+}
+
+.logo-guia {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-guia img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.header-texto span {
+    color: #79d4cc;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.header-texto h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 8px 0;
+}
+
+.header-texto p {
+    color: #d7e2ed;
+    font-size: 17px;
+}
+
+
+/* ==================================================
+   MENU
+================================================== */
+
+.menu-guia {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: white;
+    border-bottom: 1px solid var(--borde);
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    padding: 14px 5%;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.menu-guia a {
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu-guia a:hover {
+    color: var(--verde);
+}
+
+
+/* ==================================================
+   BIENVENIDA
+================================================== */
+
+.bienvenida {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 70px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--verde-suave),
+            #ffffff
+        );
+
+    border-radius: 15px;
+}
+
+.bienvenida-texto {
+    max-width: 750px;
+}
+
+.etiqueta {
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.bienvenida h2 {
+    color: var(--azul);
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1;
+    margin: 15px 0 20px;
+}
+
+.bienvenida h2 strong {
+    color: var(--verde);
+}
+
+.bienvenida p {
+    color: var(--gris);
+    font-size: 18px;
+    max-width: 650px;
+}
+
+.bienvenida-icono {
+    font-size: 160px;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+
+/* ==================================================
+   SECCIONES
+================================================== */
+
+.seccion {
+    max-width: 1400px;
+    margin: auto;
+    padding: 90px 6%;
+}
+
+.seccion-alterna {
+    max-width: none;
+    background: var(--crema-oscuro);
+}
+
+.titulo {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.titulo span {
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo h2 {
+    color: var(--azul);
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.titulo p {
+    color: var(--gris);
+}
+
+
+/* ==================================================
+   TARJETAS
+================================================== */
+
+.tarjetas {
+    max-width: 1300px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 30px 22px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    border-color: var(--verde);
+    box-shadow: 0 15px 30px rgba(22,139,130,0.12);
+}
+
+.icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   CONTENIDO DOBLE
+================================================== */
+
+.contenido-doble {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 45px;
+
+    align-items: center;
+}
+
+.numero-grande {
+    font-size: 130px;
+    font-weight: bold;
+    color: var(--verde);
+    text-align: center;
+}
+
+.contenido-doble h3 {
+    color: var(--azul);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contenido-doble p {
+    color: var(--gris);
+    margin-bottom: 20px;
+}
+
+.contenido-doble ul {
+    padding-left: 25px;
+    color: var(--texto);
+}
+
+.contenido-doble li {
+    margin: 8px 0;
+}
+
+.aviso {
+    margin-top: 25px;
+    padding: 18px;
+    background: var(--verde-suave);
+    border-left: 4px solid var(--verde);
+    color: var(--texto);
+}
+
+
+/* ==================================================
+   LISTA BATERÍA
+================================================== */
+
+.lista-grande {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.lista-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 25px;
+    margin-bottom: 15px;
+
+    background: white;
+    border-radius: 8px;
+}
+
+.lista-item strong {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--verde);
+    color: white;
+}
+
+.lista-item h3 {
+    color: var(--azul);
+}
+
+.lista-item p {
+    color: var(--gris);
+}
+
+
+/* ==================================================
+   LUCES DE ADVERTENCIA
+================================================== */
+
+.advertencias {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.advertencia {
+    background: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.luz {
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.luz.amarilla {
+    background: #f4d35e;
+}
+
+.luz.azul {
+    background: #b9dcf5;
+}
+
+.luz.verde {
+    background: #b9e5c6;
+}
+
+.luz.blanca {
+    background: #eeeeee;
+}
+
+.advertencia h3 {
+    color: var(--azul);
+}
+
+.advertencia p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   KIT
+================================================== */
+
+.kit {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.kit-item {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+
+    border: 1px solid var(--borde);
+
+    transition: 0.3s;
+}
+
+.kit-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde);
+}
+
+.kit-item span {
+    font-size: 50px;
+}
+
+.kit-item h3 {
+    color: var(--azul);
+    margin: 10px 0;
+}
+
+.kit-item p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   SEGURIDAD
+================================================== */
+
+.seguridad {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+}
+
+.seguridad-principal {
+    background: var(--azul);
+    color: white;
+    padding: 45px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.casco {
+    font-size: 100px;
+    margin-bottom: 15px;
+}
+
+.seguridad-principal h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.seguridad-principal p {
+    color: #d7e2ed;
+}
+
+.seguridad-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.seguridad-lista div {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+}
+
+.seguridad-lista span {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.seguridad-lista strong {
+    color: var(--azul);
+    font-size: 18px;
+}
+
+.seguridad-lista p {
+    color: var(--gris);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+
+/* ==================================================
+   VIAJES
+================================================== */
+
+.pasos {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.paso {
+    background: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.paso span {
+    display: block;
+
+    width: 45px;
+    height: 45px;
+
+    background: var(--verde);
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.paso h3 {
+    color: var(--azul);
+    margin-bottom: 8px;
+}
+
+.paso p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   FAQ
+================================================== */
+
+.faq {
+    max-width: 900px;
+    margin: auto;
+}
+
+.faq details {
+    background: white;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+
+    margin-bottom: 12px;
+
+    padding: 20px 25px;
+}
+
+.faq summary {
+    cursor: pointer;
+    color: var(--azul);
+    font-weight: bold;
+}
+
+.faq p {
+    color: var(--gris);
+    margin-top: 15px;
+}
+
+
+/* ==================================================
+   GALERÍA
+================================================== */
+
+.galeria {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.foto {
+    min-height: 250px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--azul),
+            var(--verde)
+        );
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.foto:hover {
+    transform: translateY(-8px);
+}
+
+.foto div {
+    font-size: 90px;
+    margin-bottom: 15px;
+}
+
+.foto span {
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   CONTACTO
+================================================== */
+
+.contacto-guia {
+    max-width: 1300px;
+    margin: 70px auto;
+
+    padding: 55px 7%;
+
+    background: var(--verde);
+
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.contacto-guia span {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contacto-guia h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.contacto-guia p {
+    color: #e3f7f4;
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+.btn-tienda {
+    display: inline-block;
+
+    background: white;
+    color: var(--verde);
+
+    padding: 13px 22px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-tienda:hover {
+    transform: translateY(-4px);
+    background: var(--azul);
+    color: white;
+}
+
+.contacto-icono {
+    font-size: 130px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    background: var(--azul);
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 5%;
+}
+
+footer > img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+footer h3 {
+    font-size: 22px;
+}
+
+footer > p {
+    color: #c8d6e2;
+    margin: 5px 0;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.redes a {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.redes img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.redes .whatsapp {
+    background: #25d366;
+}
+
+.redes .instagram {
+    background: #e1306c;
+}
+
+.redes .facebook {
+    background: #1877f2;
+}
+
+.volver-footer {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.volver-footer:hover {
+    background: var(--verde);
+    border-color: var(--verde);
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   ANIMACIONES
+================================================== */
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .header-contenido {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .volver {
+        order: 1;
+    }
+
+    .logo-guia {
+        order: 2;
+    }
+
+    .header-texto {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kit {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pasos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seguridad {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 650px) {
+
+    .guia-header {
+        padding: 20px 5%;
+    }
+
+    .header-contenido {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-guia img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .header-texto h1 {
+        font-size: 35px;
+    }
+
+    .header-texto p {
+        font-size: 14px;
+    }
+
+    .menu-guia {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        gap: 20px;
+    }
+
+    .bienvenida {
+        margin: 20px 4%;
+        padding: 45px 25px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bienvenida h2 {
+        font-size: 42px;
+    }
+
+    .bienvenida p {
+        font-size: 16px;
+    }
+
+    .bienvenida-icono {
+        font-size: 90px;
+    }
+
+    .seccion {
+        padding: 65px 5%;
+    }
+
+    .titulo h2 {
+        font-size: 30px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-doble {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .numero-grande {
+        font-size: 80px;
+    }
+
+    .contenido-doble ul {
+        text-align: left;
+    }
+
+    .advertencias {
+        grid-template-columns: 1fr;
+    }
+
+    .kit {
+        grid-template-columns: 1fr;
+    }
+
+    .seguridad-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-guia {
+        margin: 40px 4%;
+        padding: 40px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contacto-guia h2 {
+        font-size: 30px;
+    }
+
+    .contacto-icono {
+        align-self: center;
+        font-size: 90px;
+    }
+}
